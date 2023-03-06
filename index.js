@@ -7,6 +7,7 @@ import cookieParser from "cookie-parser";
 import User from "./routes/users.js";
 import videoRoutes from './routes/video.js'
 import commentRouter from './routes/comments.js'
+const PORT = process.env.PORT || 8800;
 
 const app = express();
 dotenv.config();
@@ -34,7 +35,7 @@ const connect = ()=>{
 }
 
 
-app.listen(8800, ()=>{
+app.listen(PORT, ()=>{
     connect();
     console.log("server is up");
 })
